@@ -308,7 +308,7 @@ This tutorial is open source and available for educational purposes.
 
 ## 👤 Author
 
-**Ayush Gupta**
+**Ayush**
 - GitHub: [@ayush1512](https://github.com/ayush1512)
 
 ## ⭐ Acknowledgments
