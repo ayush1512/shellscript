@@ -289,8 +289,9 @@ error_handler() {
     local error_code=$2
     echo "Error on line $line_no (exit code: $error_code)"
     echo "Command: $BASH_COMMAND"
-    # Cleanup
+    # Cleanup (note: trap EXIT will also run for final cleanup)
     rm -f /tmp/debug_test_*.txt
+    # Exit with error code (trap EXIT will still execute)
     exit $error_code
 }
 

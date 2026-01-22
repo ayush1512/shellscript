@@ -29,9 +29,10 @@ echo "=== BASIC TRAP ==="
 # Simple trap example
 trap 'echo "Signal caught!"' SIGINT
 
-# Simulate a running process
-echo "Try pressing Ctrl+C (simulation - won't actually wait)"
+# Note: In an interactive session, you would use sleep to test this
+# echo "Try pressing Ctrl+C..."
 # sleep 5  # Would wait for Ctrl+C in interactive session
+echo "Trap set for SIGINT (demonstration - no interactive wait in this tutorial)"
 
 # Reset trap
 trap - SIGINT

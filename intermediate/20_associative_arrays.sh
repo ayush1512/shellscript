@@ -106,12 +106,13 @@ declare -A config=(
     [port]="8080"
 )
 
-# Check if key exists
-if [ -n "${config[host]}" ] || [ "${config[host]+isset}" ]; then
+# Check if key exists using parameter expansion
+# The ${var+isset} pattern returns "isset" if var is set, empty otherwise
+if [ "${config[host]+isset}" ]; then
     echo "Host is set: ${config[host]}"
 fi
 
-# Better method using parameter expansion
+# Same method for another key
 if [ "${config[port]+isset}" ]; then
     echo "Port is set: ${config[port]}"
 fi

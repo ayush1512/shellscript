@@ -29,7 +29,7 @@ echo "Appended to file with >>"
 cat /tmp/output.txt
 
 # Redirect stderr to file
-ls /nonexistent 2> /tmp/errors.txt 2>&1
+ls /nonexistent 2> /tmp/errors.txt
 echo "Errors redirected to file"
 cat /tmp/errors.txt 2>/dev/null || echo "(No errors)"
 
